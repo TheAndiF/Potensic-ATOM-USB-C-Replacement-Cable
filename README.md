@@ -74,6 +74,7 @@ This is a **single reported prototype test**, not an electrical compliance, dura
 | --- | --- |
 | Potensic ATOM / DSRC02A / Android phone | **Tested successfully** with this build |
 | Potensic ATOM SE, ATOM LT | The manufacturer sells one replacement cable for the ATOM/ATOM SE/ATOM LT family; **this homemade adapter has not been tested** with those drones |
+| Potensic ATOM 2 | **Not tested** with this adapter; TAF's ATOM 2 software profile does not establish cable or controller compatibility |
 | Other controllers or iOS devices | **Not tested** |
 
 Manufacturer cable listing: https://store.potensic.com/products/usb-cable-for-atom-series-drone

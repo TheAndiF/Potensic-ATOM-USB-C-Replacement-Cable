@@ -13,6 +13,7 @@
 | Plain conventional USB-C-to-USB-C cable replacing special cable | Did not work | Reported setup |
 | Alternative extension, ASIN B0BNNHCCD1 | **Not tested** | Potential alternative only |
 | ATOM SE, ATOM LT with this adapter | **Not tested** | Manufacturer's cable family alone is not validation |
+| ATOM 2 with this adapter | **Not tested** | A PotensicProxy_TAF software profile does not establish compatibility with this physical adapter or an ATOM 2 controller |
 | iOS devices / other remotes / durability / signal integrity | **Not tested** | No claim of compatibility |
 
 ## Evidence boundaries
