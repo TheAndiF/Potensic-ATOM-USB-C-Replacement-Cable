@@ -1,10 +1,37 @@
 # Potensic ATOM USB-C Replacement Cable
 
-Reverse-engineered replacement for the directional USB-C cable between a **Potensic ATOM remote controller** (DSRC02A) and an **Android smartphone**.
+**Open-source, reverse-engineered USB-C replacement adapter for the Potensic ATOM drone controller (DSRC02A) and Android smartphones.** KiCad schematic, measured wiring, DIY build guide, tested prototype and a 3D-printable strain-relief holder.
+
+[Schematic](hardware/schematic/) · [Wiring & measurements](docs/wiring-and-measurements.md) · [Build guide](docs/build.md) · [Compatibility & tests](docs/tests-and-compatibility.md) · [Bill of materials](docs/bom.md)
 
 The original cable was investigated with a multimeter, its wiring was reconstructed in KiCad, and a working prototype was built and tested. This repository shares the schematic, editable design, 3D-printable holder, construction notes and observed behavior.
 
 > **Independent, unofficial project.** Not affiliated with or endorsed by Potensic. This is an experimental hardware build; check all connections before connecting devices. Do not use this adapter for charging, or plug it into the controller's charging port.
+
+## At a glance
+
+| Question | Answer |
+| --- | --- |
+| What does it replace? | The **directional** controller-to-Android USB-C connection on the tested Potensic ATOM / DSRC02A setup |
+| Why not use an ordinary cable? | The measured original cable uses unusual **SBU/CC** wiring and two **56 kΩ** CC-to-VBUS resistors; a regular C-to-C cable failed in the reported setup |
+| Is it tested? | **One prototype** was built; an Android AOA prompt, video, controller input and a short flight were reported |
+| Is it universal? | **No.** ATOM SE/LT, ATOM 2, other controllers and iOS are not validated by this prototype |
+| Can it increase drone range? | **No direct RF-range improvement.** This is a controller-to-phone USB connection, not an RF antenna/amplifier |
+
+### Quick path for builders
+
+1. Read the [safety and compatibility evidence](docs/tests-and-compatibility.md) before sourcing components.
+2. Inspect the authoritative [KiCad schematic (revision 0.4.10)](hardware/schematic/) and [measured pin connections](docs/wiring-and-measurements.md).
+3. Follow the [build guide](docs/build.md) and [parts list](docs/bom.md). Verify the actual breakout-board pinout and direction with a multimeter **before** connecting either device.
+4. Confirm Android accessory-mode negotiation and basic communication at the bench before any controlled field test.
+
+**There is no general-purpose ready-to-buy cable certification here:** a single successful prototype test does not establish USB compliance, longevity or suitability for every Potensic controller.
+
+## Related software: PotensicProxy_TAF
+
+**[PotensicProxy_TAF](https://github.com/TheAndiF/PotensicProxy_TAF)** is a separate, unofficial Android USB-to-Web proxy with live video, telemetry, mission tools and RF diagnostics for Potensic ATOM / ATOM 2 software profiles.
+
+The projects complement each other: **this repository documents physical cable wiring**, while TAF documents the Android AOA/software processing path. The cable prototype's DSRC02A test should **not** be interpreted as validation of every TAF controller/profile combination. See [TAF's compatibility matrix](https://github.com/TheAndiF/PotensicProxy_TAF/blob/main/docs/COMPATIBILITY.md).
 
 ## What is included?
 
@@ -61,5 +88,5 @@ Manufacturer cable listing: https://store.potensic.com/products/usb-cable-for-at
 
 ## Status and license
 
-Documentation draft intended for an initial **v0.1.0** public release. **Hardware design and STL:** CERN-OHL-S-2.0. **Documentation and measurements:** CC BY 4.0. See [`LICENSE.md`](LICENSE.md) and the complete texts in [`LICENSES/`](LICENSES/). The author's public attribution and repository URL still need to be filled in before publication.
+The repository contains a documented **v0.1.0 prototype/draft**; this does not imply a certified product or a verified GitHub Release. **Hardware design and STL:** CERN-OHL-S-2.0. **Documentation and measurements:** CC BY 4.0. See [`LICENSE.md`](LICENSE.md) and the complete texts in [`LICENSES/`](LICENSES/). The author's public attribution and final publication details remain on the [release checklist](docs/release-checklist.md) for confirmation.
 
